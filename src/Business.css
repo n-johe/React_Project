@@ -1,0 +1,13 @@
+.container {
+    margin:20px
+}
+
+.container_child {
+    float: left;
+    padding: 10px;
+}
+
+img {
+    max-width: 25%;
+    max-height: 25%;
+}
