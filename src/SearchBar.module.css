@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25rem;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.22rem;
+    color: #4d4a4a;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.options li {
+    cursor: pointer;
+    width: 4.33rem;
+    border-bottom: 1px solid #403e3e;
+    padding: 0 2.58rem 0.33rem 2.58rem;
+    line-height: 1.13;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.83rem;
+    transition: color 0.25s;
+    list-style: none;
+}
+
+.fields {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.88rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fields input {
+    width: 21rem;
+    padding: 0.66rem 1rem;
+    margin-right: 2.22rem;
+    border: 1px solid #403e3e;
+    border-radius: 4px;
+    font-size: 0.77rem;
+    font-weight: 500;
+    margin-right: 0;
+    margin-bottom: 0.86rem;
+}
+
+.fields input:last-child {
+    margin-right: 0;
+}
+
+
+.submit {
+    text-align: center;
+    color: #4d4a4a;
+}
+
+
