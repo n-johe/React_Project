@@ -3,17 +3,12 @@ import Business from "./Business";
 import styles from './BusinessList.module.css'
 
 
-function BusinessList() {
+function BusinessList(prop) {
     return (
         <div className={styles.container}>
-            <ul className={styles.list}>
-                <li><Business/></li>
-                <li><Business/></li>
-                <li><Business/></li>
-                <li><Business/></li>
-                <li><Business/></li>
-                <li><Business/></li>
-            </ul>
+            {prop.businesses.map(business => {
+                return <Business businessObject={business}/>;
+            })}
         </div>
     );
 }
