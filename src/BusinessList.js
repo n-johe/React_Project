@@ -3,11 +3,11 @@ import Business from "./Business";
 import styles from './BusinessList.module.css'
 
 
-function BusinessList(prop) {
+function BusinessList(props) {
     return (
         <div className={styles.container}>
-            {prop.businesses.map(business => {
-                return <Business businessObject={business}/>;
+            {props.businesses.map(business => {
+                return <Business business={business} key={business.id}/>;
             })}
         </div>
     );

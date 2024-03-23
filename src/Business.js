@@ -6,20 +6,20 @@ function Business(props) {
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>
-                <img src={props.businessObject.imageSrc} alt=""></img>
+                <img src={props.business.imageSrc} alt=""></img>
             </div>
-            <h2>{props.businessObject.name}</h2>
+            <h2>{props.business.name}</h2>
             <div className={styles.businessInfo}>
                 <div className={styles.locationContainer}>
-                    <p>{props.businessObject.address}</p>
-                    <p>{props.businessObject.city}</p>
-                    <p>{`${props.businessObject.state} ${props.businessObject.zipCode}`}</p>
+                    <p>{props.business.address}</p>
+                    <p>{props.business.city}</p>
+                    <p>{`${props.business.state} ${props.business.zipCode}`}</p>
                 </div>
 
                 <div className={styles.reviewContainer}>
-                    <h3 className={styles.category}>{props.businessObject.category}</h3>
-                    <h3 className={styles.rating}>{`${props.businessObject.rating} stars`}</h3>
-                    <p>{`${props.businessObject.reviewCount} reviews`}</p>
+                    <h3 className={styles.category}>{props.business.category}</h3>
+                    <h3 className={styles.rating}>{`${props.business.rating} stars`}</h3>
+                    <p>{`${props.business.reviewCount} reviews`}</p>
                 </div>
            </div>
         </div>

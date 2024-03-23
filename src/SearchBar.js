@@ -1,24 +1,27 @@
 import React, {useState} from "react";
 import styles from './SearchBar.module.css';
 
-function SearchBar() {
+
+
+function SearchBar(props) {
     const [term, setTerm] = useState('');
     const [location, setLocation] = useState('');
-    const [option, setOption] = useState('Best Match');
+    const [option, setOption] = useState('best_match');
 
-    const eventHandler = () => {
-        console.log(`Searching Yelp with ${term} in ${location} with option ${option}`);
+    const eventHandler = (event) => {
+       event.preventDefault();
+       props.searchYelp(term, location, option);
     };
 
     return (
         <div className={styles.container}>
             <ul className={styles.options}>
-                <li className={option === 'Best Match' ? styles.activeOption : ''}
-                onClick={() => {setOption('Best Match')}}>Best Match</li>
-                <li className={option === 'Highest Rated' ? styles.activeOption : ''}
-                onClick={() => {setOption('Highest Rated')}}>Highest Rated</li>
-                <li className={option === 'Most Reviewed' ? styles.activeOption : ''}
-                onClick={() => {setOption('Most Reviewed')}}>Most Reviewed</li>
+                <li className={option === 'best_match' ? styles.activeOption : ''}
+                onClick={() => {setOption('best_match')}}>Best Match</li>
+                <li className={option === 'rating' ? styles.activeOption : ''}
+                onClick={() => {setOption('rating')}}>Highest Rated</li>
+                <li className={option === 'review_count' ? styles.activeOption : ''}
+                onClick={() => {setOption('review_count')}}>Most Reviewed</li>
             </ul>
             <div className={styles.fields}>
                 <input placeholder="Category" onChange={(event) => {setTerm(event.target.value)}}/>

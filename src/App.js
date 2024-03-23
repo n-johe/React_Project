@@ -1,51 +1,23 @@
+import React, {useState} from 'react';
 import styles from './App.module.css';
 import BusinessList from './BusinessList';
 import SearchBar from './SearchBar';
+import {search} from '../src/utils/getData';
 
-const list = [
-  {
-    imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Flavortown',
-    state: 'NY',
-    zipCode: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90
-  },
-
-  {
-    imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Flavortown',
-    state: 'NY',
-    zipCode: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90
-  },
-
-  {
-    imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Flavortown',
-    state: 'NY',
-    zipCode: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90
-  }
-
-];
 
 function App() {
+
+  const [businesses, setBusinesses] = useState([]);
+
+  const searchYelp = async (term, location, sortBy) => {
+    const businesses = await search(term, location, sortBy);
+    setBusinesses(businesses);
+  }
+
   return (
     <div className={styles.container}>
-      <SearchBar/>
-      <BusinessList businesses={list}/>
+      <SearchBar searchYelp={searchYelp}/>
+      <BusinessList businesses={businesses}/>
     </div>
   );
 }
