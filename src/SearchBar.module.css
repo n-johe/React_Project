@@ -29,6 +29,12 @@
     list-style: none;
 }
 
+.activeOption,
+.options li:hover {
+    border-bottom: 1px solid #ee8114;
+    color: #e0a225;
+}
+
 .fields {
     display: flex;
     justify-content: center;
