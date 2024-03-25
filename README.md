@@ -1,3 +1,13 @@
+Purpose of This Project: To practice React by building a restaurant recommendation application.
+
+Technologies Used: HTML, CSS, Javascript, React and Yelp API.
+
+Features: The user can choose how they want the recommendations to be sorted: by 'Best Match', 'Highest Rated' or 'Most Reviewed'. The user can also search for a specific restaurant name or a general food category.
+
+File Structure: Components and their corresponding CSS code are in the src folder. The file 'App.js' is the top-level component and the file 'index.js' is the entrypoint. Within src there is another folder called 'utils' which holds the code that communicates with the Yelp API.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
